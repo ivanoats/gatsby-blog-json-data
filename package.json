@@ -7,21 +7,23 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "fs-extra-promise": "^1.0.1",
     "gatsby": "next",
     "gatsby-link": "next",
-    "gatsby-transformer-remark": "next",
-    "gatsby-transformer-sharp": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-preact": "next",
     "gatsby-plugin-sharp": "next",
-    "gatsby-source-filesystem": "next",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-prismjs": "next",
     "gatsby-remark-responsive-iframe": "next",
     "gatsby-remark-responsive-image": "next",
     "gatsby-remark-smartypants": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-json": "^1.0.0-alpha12-alpha.51e1923f",
+    "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "next",
     "lodash": "^4.15.0",
     "moment": "^2.14.1",
     "react-helmet": "^4.0.0",
@@ -35,7 +37,14 @@
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-react": "^7.0.1",
+    "gh-pages": "^0.12.0",
+    "prettier": "^1.3.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -49,6 +58,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
+    "fetch": "node scripts/fetch",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
